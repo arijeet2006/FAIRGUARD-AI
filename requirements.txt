@@ -1,0 +1,15 @@
+streamlit
+pandas
+plotly
+scikit-learn
+holisticai
+fairlearn
+matplotlib
+reportlab
+python-dotenv
+groq
+shap
+jax
+jaxlib
+optax
+flax
