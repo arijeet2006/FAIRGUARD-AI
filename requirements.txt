@@ -12,4 +12,6 @@ shap
 jax
 jaxlib
 optax
-flax
+flax            
+fpdf2               
+pillow              

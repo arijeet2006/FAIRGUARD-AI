@@ -35,7 +35,7 @@ if page == "Home":
         df = pd.read_csv(url, names=col_names, skipinitialspace=True, na_values='?')
         df = df.dropna().reset_index(drop=True)
         st.session_state['df'] = df
-        st.success("✅ Adult dataset loaded and cleaned!")
+        st.success("Adult dataset loaded and cleaned!")
         st.dataframe(df.head())
 
 # ==================== UPLOAD ====================
@@ -46,12 +46,12 @@ elif page == "Upload Data":
         df = pd.read_csv(uploaded_file, na_values='?')
         df = df.dropna().reset_index(drop=True)
         st.session_state['df'] = df
-        st.success(f"✅ Loaded and cleaned: {df.shape[0]:,} rows")
+        st.success(f"Loaded and cleaned: {df.shape[0]:,} rows")
         st.dataframe(df.head())
 
 # ==================== BIAS SCAN ====================
 elif page == "Bias Scan":
-    st.header("🔍 Bias Scan")
+    st.header(" Bias Scan")
     if st.session_state['df'] is None:
         st.warning("Load a dataset first.")
         st.stop()
@@ -231,11 +231,11 @@ elif page == "Mitigation":
                          title="Prediction Rate: Before vs After")
             st.plotly_chart(fig, use_container_width=True)
 
-            st.success("🎉 Mitigation applied successfully!")
+            st.success("Mitigation applied successfully!")
 
 # ==================== REPORT ====================
 elif page == "Generate Report":
-    st.header("📄 Generate Report")
+    st.header("Generate Report")
     st.info("PDF report with LLM summary coming will be implemented in future updates.")
 
 st.sidebar.caption("FairGuard AI - Pandas Styler Fixed (map instead of applymap)")
